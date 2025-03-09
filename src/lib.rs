@@ -1,14 +1,10 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
-}
+use solana_program::entrypoint;
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+pub mod handlers;
+pub mod instructions;
+pub mod processor;
+pub mod state;
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
-}
+use processor::process_instruction;
+
+entrypoint!(process_instruction);
