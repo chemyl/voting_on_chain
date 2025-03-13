@@ -4,10 +4,15 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-borsh = "1.2.1"
-solana-program = "1.18"
+borsh = "0.9.3"
+borsh-derive = "1.2.1"
+solana-program = "1.18.26"
 thiserror = "2"
-
 
 [lib]
 crate-type = ["cdylib", "lib"]
+
+[dev-dependencies]
+solana-program-test = "1.18.26"
+solana-sdk = "1.18.26"
+tokio = "1.44.0"

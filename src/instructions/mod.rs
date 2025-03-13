@@ -1,1 +1,1 @@
-pub mod voting;
+pub mod voting_instructions;

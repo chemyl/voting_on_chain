@@ -1,10 +1,6 @@
+use borsh::{BorshDeserialize, BorshSerialize};
+#[derive(BorshDeserialize, BorshSerialize, Debug)]
 pub struct VoteAccount {
-    name: String,
-    result: u32,
-}
-
-impl VoteAccount {
-    pub fn new(name: String, result: u32) -> Self {
-        VoteAccount { name, result }
-    }
+    pub name: Vec<u8>,
+    pub result: u32,
 }
